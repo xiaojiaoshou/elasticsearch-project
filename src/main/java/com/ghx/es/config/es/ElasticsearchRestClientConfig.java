@@ -57,8 +57,8 @@ public class ElasticsearchRestClientConfig extends AbstractElasticsearchConfigur
         return RestClients.create(clientConfiguration).rest();
     }
 
-//    @Bean
-//    public ElasticsearchRestTemplate restTemplate() throws Exception {
-//        return new ElasticsearchRestTemplate(elasticsearchClient());
-//    }
+    @Bean
+    public ElasticsearchRestTemplate restTemplate() throws Exception {
+        return new ElasticsearchRestTemplate(elasticsearchClient());
+    }
 }

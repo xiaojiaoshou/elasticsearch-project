@@ -18,10 +18,10 @@ public class ElasitcsearchSettingConfig {
     @Value("${elasticSearch.host.port}")
     private String hostAndPort;
 
-    @Value("${elasticSearch.user}")
+    @Value("${elasticSearch.user:null}")
     private String user;
-    @Value("${elasticSearch.password}")
+    @Value("${elasticSearch.password:null}")
     private String password;
-    @Value("${elasticSearch.socketTimeout :5}")
+    @Value("${elasticSearch.socketTimeout:5}")
     private long socketTimeout;
 }
