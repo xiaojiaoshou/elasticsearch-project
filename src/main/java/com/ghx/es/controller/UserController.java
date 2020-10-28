@@ -44,13 +44,13 @@ public class UserController {
      * ElasticsearchRestTemplate  是 elasticsearchOperations 的实现
      */
     @Autowired
-    private ElasticsearchRestTemplate elasticsearchRestTemplate;
+    private ElasticsearchRestTemplate restTemplate;
 
 
     @RequestMapping("/getUserById")
     public User getUserById(Long id) {
 
-        User user = elasticsearchRestTemplate
+        User user = restTemplate
                 // .queryForObject(GetQuery.getById(id.toString()), User.class);
                 .get(id.toString(), User.class);
         return user;
